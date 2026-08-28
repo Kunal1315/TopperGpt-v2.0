@@ -117,9 +117,99 @@ nav a:hover{
     cursor: pointer;
     transition: 0.2s;
     border: none;
-    background: rgb(88, 193, 200);
+    background-color: rgb(88, 193, 200);
+}
+
+.send-btn a{
+    text-decoration: none;
+    justify-content: center;
+    color: black;
 }
 
 .send-btn:hover{
     transform: scale(1.18);
+    color: white;
 }
+
+/*quick-btn*/
+.quick-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.quick-btn button {
+    background: transparent;
+    color: #b5b5b5;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quick-btn button:hover {
+    background: #222;
+    color: white;
+    border-color: #555;
+}
+
+/*container*/
+.container {
+            width: 90%;
+            max-width: 1300px;
+            margin: auto;
+            padding: 70px 0;
+        }
+
+        /* Heading */
+        .heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .heading span {
+            display: inline-block;
+            background: #1d2850;
+            color: #8b7cff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .heading p {
+            display: flex;
+            justify-content: center;
+            color: #9ca8bd;
+            font-size: 20px;
+        }
+
+        /* Cards Grid */
+        .card-tool {
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* Individual Card */
+        .card {
+            position: relative;
+            min-height: 300px;
+            padding: 32px;
+            background: #111722;
+            border: 1px solid #29344a;
+            border-radius: 22px;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #6574a0;
+            background: #151c2a;
+        }
