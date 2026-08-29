@@ -190,7 +190,6 @@ nav a:hover{
 
         /* Cards Grid */
         .card-tool {
-            
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
@@ -212,4 +211,9 @@ nav a:hover{
             transform: translateY(-6px);
             border-color: #6574a0;
             background: #151c2a;
+        }
+
+        footer{
+            background-color: rgb(88, 193, 200);
+            color: white;
         }
