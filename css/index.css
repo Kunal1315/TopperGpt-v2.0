@@ -64,7 +64,7 @@ nav a:hover{
 }
 
 /*hero element*/
-.hero h1 strong{
+.heroo h1 strong{
     display: flex;
     color: white;
     padding: 10px;
@@ -223,31 +223,12 @@ nav a:hover{
             color: white;
         }
 
-
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            min-height: 100vh;
-            background: #020d18;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            overflow-x: hidden;
-        }
-
         /* ================= BACKGROUND ================= */
-
         body::before {
             content: "";
             position: fixed;
             inset: 0;
             pointer-events: none;
-
             background:
                 linear-gradient(
                     rgba(0, 200, 255, 0.035) 1px,
@@ -258,7 +239,6 @@ nav a:hover{
                     rgba(0, 200, 255, 0.035) 1px,
                     transparent 1px
                 );
-
             background-size: 55px 55px;
         }
 
@@ -270,71 +250,25 @@ nav a:hover{
             height: 600px;
             right: -250px;
             top: -250px;
-
             background: #00d9ff;
             opacity: 0.08;
-
             filter: blur(120px);
             border-radius: 50%;
-
             pointer-events: none;
         }
-
-        /* ================= NAVBAR ================= */
-
-        
-        .logo {
-            font-size: 25px;
-            font-weight: 800;
-        }
-
-        .logo span {
-            color: #16d9f4;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #9eafc2;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: white;
-        }
-
-        .login {
-            border: 1px solid #28455a;
-            padding: 10px 20px;
-            border-radius: 25px;
-        }
-
         /* ================= HERO ================= */
-
         .hero {
             width: 90%;
             max-width: 1450px;
-
             min-height: calc(100vh - 90px);
-
             margin: auto;
-
             display: grid;
             grid-template-columns: 1fr 1.05fr;
-
             gap: 50px;
-
             align-items: center;
         }
 
         /* ================= LEFT ================= */
-
         .hero-left {
             padding-bottom: 40px;
         }
@@ -343,18 +277,12 @@ nav a:hover{
             display: inline-flex;
             align-items: center;
             gap: 9px;
-
             padding: 9px 18px;
-
             border: 1px solid #008aa6;
             border-radius: 30px;
-
             color: #8ce6f2;
-
             background: rgba(0, 200, 255, 0.06);
-
             font-size: 13px;
-
             margin-bottom: 27px;
         }
 
@@ -365,11 +293,8 @@ nav a:hover{
 
         h1 {
             font-size: clamp(50px, 5.3vw, 80px);
-
             line-height: 0.99;
-
             letter-spacing: -4px;
-
             margin-bottom: 30px;
         }
 
@@ -379,64 +304,45 @@ nav a:hover{
 
         .description {
             max-width: 650px;
-
             color: #afc0d3;
-
             font-size: 19px;
-
             line-height: 1.65;
-
             margin-bottom: 32px;
         }
 
         /* ================= BUTTONS ================= */
-
         .buttons {
             display: flex;
             align-items: center;
             gap: 18px;
-
             margin-bottom: 35px;
         }
 
         .start-btn {
             text-decoration: none;
-
             color: #03131b;
-
             background: #17d8ef;
-
             padding: 18px 28px;
-
             border-radius: 35px;
-
             font-size: 16px;
             font-weight: bold;
-
             box-shadow:
                 0 0 25px rgba(0, 220, 255, 0.25);
-
             transition: 0.3s;
         }
 
         .start-btn:hover {
             transform: translateY(-3px);
-
             box-shadow:
                 0 0 40px rgba(0, 220, 255, 0.4);
         }
 
         .demo-btn {
             text-decoration: none;
-
             color: white;
-
             border: 1px solid #29465b;
-
             padding: 17px 27px;
-
             border-radius: 35px;
-
             transition: 0.3s;
         }
 
@@ -454,11 +360,8 @@ nav a:hover{
         .feature {
             display: flex;
             align-items: center;
-
             gap: 12px;
-
             padding-right: 28px;
-
             border-right: 1px solid #274052;
         }
 
@@ -482,11 +385,9 @@ nav a:hover{
         }
 
         /* ================= RIGHT DASHBOARD ================= */
-
         .dashboard-area {
             position: relative;
             min-height: 560px;
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -495,24 +396,18 @@ nav a:hover{
         .dashboard {
             width: 100%;
             max-width: 610px;
-
             background:
                 linear-gradient(
                     145deg,
                     rgba(7, 27, 43, 0.96),
                     rgba(2, 15, 27, 0.97)
                 );
-
             border: 1px solid #087d9b;
-
             border-radius: 25px;
-
             padding: 27px;
-
             box-shadow:
                 0 0 60px rgba(0, 200, 255, 0.08),
                 inset 0 0 50px rgba(0, 170, 220, 0.025);
-
             position: relative;
             z-index: 2;
         }
@@ -523,7 +418,6 @@ nav a:hover{
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             margin-bottom: 35px;
         }
 
@@ -531,7 +425,6 @@ nav a:hover{
             display: flex;
             align-items: center;
             gap: 10px;
-
             font-size: 18px;
             font-weight: bold;
         }
@@ -545,26 +438,18 @@ nav a:hover{
             display: flex;
             align-items: center;
             gap: 7px;
-
             background: rgba(0, 255, 170, 0.07);
-
             border: 1px solid #175c58;
-
             color: #7af0c3;
-
             padding: 7px 13px;
-
             border-radius: 20px;
-
             font-size: 11px;
         }
 
         .online-dot {
             width: 7px;
             height: 7px;
-
             border-radius: 50%;
-
             background: #00e99a;
         }
 
@@ -582,21 +467,14 @@ nav a:hover{
         }
 
         /* ================= INPUT ================= */
-
         .ask-box {
             height: 62px;
-
             border: 1px solid #20516a;
-
             border-radius: 32px;
-
             display: flex;
             align-items: center;
-
             padding: 8px 10px 8px 20px;
-
             background: #061b2b;
-
             margin-bottom: 22px;
         }
 
@@ -607,16 +485,11 @@ nav a:hover{
 
         .ask-box input {
             flex: 1;
-
             background: transparent;
-
             border: none;
             outline: none;
-
             color: white;
-
             font-size: 15px;
-
             padding: 0 13px;
         }
 
@@ -627,17 +500,11 @@ nav a:hover{
         .send-btn {
             width: 44px;
             height: 44px;
-
             border: none;
-
             border-radius: 50%;
-
             background: #16d9f3;
-
             color: #03131b;
-
             font-size: 22px;
-
             cursor: pointer;
         }
 
@@ -646,91 +513,66 @@ nav a:hover{
         .quick-actions {
             display: flex;
             gap: 12px;
-
             margin-bottom: 25px;
         }
 
         .quick-actions button {
             flex: 1;
-
             background: transparent;
-
             border: 1px solid #203e52;
-
             color: #d9e3ec;
-
             padding: 11px 8px;
-
             border-radius: 25px;
-
             cursor: pointer;
-
             transition: 0.3s;
         }
 
         .quick-actions button:hover {
             border-color: #16d9f3;
-
             color: #16d9f3;
         }
 
         /* ================= TOOL CARDS ================= */
-
         .tool-grid {
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
-
             gap: 14px;
         }
 
         .tool {
             min-height: 150px;
-
             background: #061827;
-
             border: 1px solid #18374c;
-
             border-radius: 15px;
-
             padding: 17px;
-
             transition: 0.3s;
         }
 
         .tool:hover {
             transform: translateY(-4px);
-
             border-color: #0b8ca8;
         }
 
         .tool-icon {
             font-size: 28px;
-
             color: #13dff7;
-
             margin-bottom: 17px;
         }
 
         .tool h3 {
             font-size: 14px;
-
             margin-bottom: 7px;
         }
 
         .tool p {
             color: #72889d;
-
             font-size: 11px;
-
             line-height: 1.5;
         }
 
         .tool-arrow {
             color: #16d9f3;
-
             display: block;
-
             margin-top: 12px;
         }
 
@@ -738,22 +580,14 @@ nav a:hover{
 
         .progress-card {
             position: absolute;
-
             right: -45px;
             top: 85px;
-
             width: 170px;
-
             padding: 18px;
-
             background: #071b2a;
-
             border: 1px solid #23465c;
-
             border-radius: 18px;
-
             z-index: 4;
-
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
         }
 
@@ -765,19 +599,13 @@ nav a:hover{
         .progress-circle {
             width: 67px;
             height: 67px;
-
             border-radius: 50%;
-
             border: 6px solid #12d8ef;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             color: #15def6;
-
             font-weight: bold;
-
             margin-bottom: 10px;
         }
 
@@ -795,47 +623,30 @@ nav a:hover{
 
         .ai-card {
             position: absolute;
-
             left: -55px;
             bottom: 80px;
-
             width: 200px;
-
             background: #071b2a;
-
             border: 1px solid #0c718b;
-
             border-radius: 18px;
-
             padding: 18px;
-
             display: flex;
-
             align-items: center;
-
             gap: 13px;
-
             z-index: 4;
-
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
         }
 
         .ai-icon {
             width: 52px;
             height: 52px;
-
             border-radius: 14px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             background: rgba(0, 220, 255, 0.08);
-
             border: 1px solid #087d9b;
-
             color: #17e0f8;
-
             font-size: 27px;
         }
 
@@ -859,144 +670,37 @@ nav a:hover{
         }
 
         /* ================= SCORE CARD ================= */
-
         .score-card {
             position: absolute;
-
             right: -25px;
             bottom: 30px;
-
             padding: 15px 20px;
-
             border: 1px solid #07809c;
-
             background: #071c2b;
-
             border-radius: 17px;
-
             color: #9ed5df;
-
             font-size: 12px;
-
             transform: rotate(-5deg);
-
             z-index: 5;
         }
 
         .score-card strong {
             color: #17e1f7;
-        }
-
-        /* ================= RESPONSIVE ================= */
-
-        @media (max-width: 1100px) {
-
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 60px 0;
-            }
-
-            .hero-left {
-                text-align: center;
-            }
-
-            .description {
                 margin-left: auto;
                 margin-right: auto;
             }
-
             .buttons {
                 justify-content: center;
             }
-
             .features {
                 justify-content: center;
             }
-
             .dashboard-area {
                 margin-top: 30px;
             }
-
             .dashboard {
                 margin: auto;
             }
-
-        }
-
-        @media (max-width: 700px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            h1 {
-                font-size: 48px;
-                letter-spacing: -2px;
-            }
-
-            .description {
-                font-size: 16px;
-            }
-
-            .buttons {
-                flex-direction: column;
-            }
-
-            .start-btn,
-            .demo-btn {
-                width: 100%;
-                text-align: center;
-            }
-
-            .features {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .feature {
-                border-right: none;
-            }
-
-            .dashboard {
-                padding: 20px;
-            }
-
-            .tool-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .progress-card,
-            .ai-card,
-            .score-card {
-                display: none;
-            }
-
-            .quick-actions {
-                flex-wrap: wrap;
-            }
-
-            .quick-actions button {
-                min-width: 45%;
-            }
-
-        }
-
-        @media (max-width: 450px) {
-
-            h1 {
-                font-size: 40px;
-            }
-
-            .tool-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .dash-title h2 {
-                font-size: 24px;
-            }
-
-        }
-
 /* =========================
    FOOTER
 ========================= */
