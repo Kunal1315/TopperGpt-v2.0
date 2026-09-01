@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TopperGPT - AI-Powered Study Companion</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <div class="brand-icon"></div>
+        <div class="brand-title">Topper<span>GPT</span></div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#foundation" class="nav-link active">Foundation</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#business" class="nav-link">Business</a></li>
+        <li><a href="#developers" class="nav-link">Developers</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-secondary">Login</button>
+        <a href="#tools" class="btn btn-primary">Explore Tools →</a>
+      </div>
+    </div>
+  </header>
+
+  <!--dashboard-->
+  <div class="container">
+    <div class="hero-grid">
+      
+      <!-- ================= LEFT COLUMN: HERO CONTENT ================= -->
+      <div class="hero-left">
+        
+        <div class="badge-pill">
+          <span>✦</span>
+          AI POWERED LEARNING COMPANION
+        </div>
+
+        <h1 class="hero-title">
+          Study Smarter<br />
+          with <span class="highlight">TopperGPT</span>
+        </h1>
+
+        <p class="hero-desc">
+          Get instant explanations, personalized answers, smart notes, and practice questions — all in one place. Your AI tutor for better learning and higher scores.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="focusDashboardInput()">
+            Start Learning Free →
+          </button>
+          <button class="btn btn-secondary" onclick="alert('Launching interactive study demo!')">
+            ▶ Watch 1-Min Demo
+          </button>
+        </div>
+
+        <div class="features-row">
+          <div class="feature-item">
+            <div class="feature-icon">📚</div>
+            <div class="feature-text">
+              <h4>2,500+</h4>
+              <p>Syllabus Chapters</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-text">
+              <h4>98% Accuracy</h4>
+              <p>Verified Equations</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-text">
+              <h4>24/7 Tutor</h4>
+              <p>Instant Guidance</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= RIGHT COLUMN: LIVE INTERACTIVE DASHBOARD ================= -->
+      <div class="dashboard-wrapper">
+        
+        <div class="dashboard-card">
+          
+          <!-- Header -->
+          <div class="dash-header">
+            <div class="dash-brand">
+              <span>♢</span> TopperGPT
+            </div>
+            <div class="dash-status">
+              <span class="status-dot"></span>
+              Online
+            </div>
+          </div>
+
+          <!-- Greeting -->
+          <div class="dash-greeting">
+            <h3>Hello, Student <span>👋</span></h3>
+            <p>What would you like to learn today?</p>
+          </div>
+
+          <!-- Live Input Form -->
+          <form class="dash-search-form" id="studyForm" onsubmit="handleStudySubmit(event)">
+            <div class="dash-input-container">
+              <span style="color: var(--accent); margin-right: 0.5rem; font-family: var(--font-mono);">✧</span>
+              <input
+                type="text"
+                id="studyInput"
+                class="dash-input"
+                placeholder="Ask anything (e.g. Newton's 3rd Law, Calculus, DNA)..."
+                autocomplete="off"
+              />
+              <button type="submit" class="dash-submit-btn" title="Submit Question">↑</button>
+            </div>
+          </form>
+
+          <!-- Quick Action Buttons -->
+          <div class="quick-chips">
+            <button type="button" class="chip-btn" onclick="setQuery('💡 Explain', 'Explain the mechanism of Photosynthesis and cellular energy balance.')">💡 Explain</button>
+            <button type="button" class="chip-btn" onclick="setQuery('📄 Summarize', 'Summarize key laws of Thermodynamics in high-yield bullet points.')">📄 Summarize</button>
+            <button type="button" class="chip-btn" onclick="setQuery('🎯 Practice', 'Give me 3 practice problems on Calculus Integration with step-by-step solutions.')">🎯 Practice</button>
+            <button type="button" class="chip-btn" onclick="setQuery('📖 Study', 'Generate a 15-minute quick study roadmap for Quantum Physics basics.')">📖 Study</button>
+          </div>
+
+          <!-- 4-Tool Quad Grid -->
+          <div class="tool-quad-grid">
+            <div class="quad-item" onclick="setQuery('📖 Study GPT', 'Guide me through Newton\'s Laws of Motion with real-world examples.')">
+              <div>
+                <div class="quad-icon">📖</div>
+                <div class="quad-title">Study</div>
+                <div class="quad-desc">Learn concepts</div>
+              </div>
+              <div class="quad-action">Launch →</div>
+            </div>
+
+            <div class="quad-item" onclick="setQuery('📄 Smart Notes', 'Format Cornell summary notes on Organic Chemistry functional groups.')">
+              <div>
+                <div class="quad-icon">📄</div>
+                <div class="quad-title">Notes</div>
+                <div class="quad-desc">Cornell summaries</div>
+              </div>
+              <div class="quad-action">Launch →</div>
+            </div>
+
+            <div class="quad-item" onclick="setQuery('🎯 Quiz Arena', 'Generate a 5-question multiple choice test on Genetics & DNA replication.')">
+              <div>
+                <div class="quad-icon">🎯</div>
+                <div class="quad-title">Practice</div>
+                <div class="quad-desc">Take tests & score</div>
+              </div>
+              <div class="quad-action">Launch →</div>
+            </div>
+
+            <div class="quad-item" onclick="setQuery('📈 Performance', 'Show my weekly mastery metrics and exam readiness recommendation.')">
+              <div>
+                <div class="quad-icon">📈</div>
+                <div class="quad-title">Growth</div>
+                <div class="quad-desc">See progress</div>
+              </div>
+              <div class="quad-action">Launch →</div>
+            </div>
+          </div>
+
+          <!-- Live Simulated AI Output Box -->
+          <div id="aiResponseBox" class="ai-response-box">
+            <div class="ai-response-header">
+              <span>✦ TOPPERGPT AI RESPONSE</span>
+              <span id="responseTag">Active Session</span>
+            </div>
+            <p id="responseText" style="color: #e5e5e5;"></p>
+          </div>
+
+        </div>
+
+        <!-- Floating Progress Badge -->
+        <div class="floating-badge-progress">
+          <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); font-weight: 700;">Your Progress</span>
+          <div class="radial-score">78%</div>
+          <p style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--text-muted);">
+            Topics <strong style="color: var(--accent);">24 / 31</strong>
+          </p>
+        </div>
+
+        <!-- Floating AI Tutor Badge -->
+        <div class="floating-badge-tutor">
+          <div style="width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; background: rgba(16,185,129,0.15); border: 1px solid var(--border-highlight); display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+            🧠
+          </div>
+          <div>
+            <span style="font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; font-family: var(--font-mono); font-weight: 700; display: block;">AI Study Tutor</span>
+            <strong style="font-size: 0.8rem; color: #fff;">Always Ready</strong>
+            <p style="font-size: 0.65rem; color: var(--accent);">24/7 Smart Guidance</p>
+          </div>
+        </div>
+
+        <!-- Floating Trophy Badge -->
+        <div class="floating-badge-trophy">
+          <span style="font-size: 1.25rem;">🏆</span>
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); font-family: var(--font-mono);">Higher Scores</div>
+            <div style="font-size: 0.65rem; color: var(--text-muted);">Brighter Future →</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Interactive Client-Side Handler -->
+  <script>
+    function focusDashboardInput() {
+      const input = document.getElementById('studyInput');
+      input.focus();
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function setQuery(tag, queryText) {
+      const input = document.getElementById('studyInput');
+      input.value = queryText;
+      handleStudySubmit(null, tag);
+    }
+
+    function handleStudySubmit(event, customTag) {
+      if (event) event.preventDefault();
+      const input = document.getElementById('studyInput');
+      const query = input.value.trim() || "Explain Newton's 3rd Law of Motion with everyday examples";
+      
+      const responseBox = document.getElementById('aiResponseBox');
+      const responseText = document.getElementById('responseText');
+      const tagLabel = document.getElementById('responseTag');
+
+      tagLabel.innerText = customTag || 'Instant Explanation';
+      responseBox.classList.add('visible');
+
+      responseText.innerHTML = '<span style="color: var(--accent);">✦ Formulating verified answer for: "<em>' + query + '</em>"...</span><br><br>' +
+        '<strong>Key Takeaway:</strong> Every action has an equal and opposite reaction. Concepts are structured into core principles, step-by-step mathematical reasoning, and high-frequency exam problems to ensure top mastery.';
+    }
+  </script>
+  <!--End of dashboard-->
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge">✦ ACADEMIC INTELLIGENCE 2024–2026</div>
+      <h1 class="hero-title">
+        The AI Tutor Built For<br />
+        <span class="gradient-text">Top Academic Ranks</span>
+      </h1>
+      <p class="hero-desc">
+        Turn complex formulas, thick textbooks, and exam syllabi into bite-sized mastery with interactive quizzes, Cornell notes, and step-by-step solutions.
+      </p>
+
+      <div class="search-box">
+        <input type="text" placeholder="Ask any physics problem, math theorem, or bio concept..." />
+        <button class="btn btn-primary">Explain</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Tools Grid Section -->
+  <section id="tools" class="container">
+    <div class="section-header">
+      <div class="badge">SMART MODULES</div>
+      <h2 class="section-title">Supercharge Your <span style="color: var(--accent);">Study Routine</span></h2>
+    </div>
+
+    <div class="tools-grid">
+      <!-- Card 1 -->
+      <div class="tool-card">
+        <span class="tool-card-badge">Most Popular</span>
+        <div>
+          <div class="tool-card-icon"></div>
+          <h3>Study GPT Tutor</h3>
+          <p>Instant conversational breakdown of any concept with visual analogies, formula derivations, and common exam pitfalls.</p>
+        </div>
+        <div class="tool-card-footer">
+          <span class="category">Interactive AI</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="tool-card">
+        <span class="tool-card-badge">Productivity</span>
+        <div>
+          <div class="tool-card-icon"></div>
+          <h3>Smart Notes Maker</h3>
+          <p>Convert messy syllabus lectures into Cornell-formatted, bulleted summary notes ready for high-recall active retention.</p>
+        </div>
+        <div class="tool-card-footer">
+          <span class="category">Note-Taking</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="tool-card">
+        <span class="tool-card-badge">Test Prep</span>
+        <div>
+          <div class="tool-card-icon"></div>
+          <h3>Interactive Quiz Arena</h3>
+          <p>Practice with real exam questions, timer-based mock drills, and instant scoring diagnostics with answer explanations.</p>
+        </div>
+        <div class="tool-card-footer">
+          <span class="category">Assessment</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="tool-card">
+        <div>
+          <div class="tool-card-icon"></div>
+          <h3>Step-by-Step Solver</h3>
+          <p>Step-through math and science equations with step-by-step mathematical reasoning and verified logic.</p>
+        </div>
+        <div class="tool-card-footer">
+          <span class="category">Problem Solving</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="tool-card">
+        <div>
+          <div class="tool-card-icon"></div>
+          <h3>Flashcard Studio</h3>
+          <p>Spaced repetition flashcards generated automatically from your curriculum chapters for instant memory locking.</p>
+        </div>
+        <div class="tool-card-footer">
+          <span class="category">Memory Recall</span>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="tool-card">
+        <div>
+          <div class="tool-card-icon"></div>
+          <h3>Performance Tracker</h3>
+          <p>Monitor your subject mastery %, test readiness scores, and daily study streaks with AI-guided recommendations.</p>
+        </div>
+        <div class="tool-card-footer">
+          <span class="category">Analytics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <strong style="color: #fff;">© 2024–2026 TopperGPT Inc.</strong> All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
