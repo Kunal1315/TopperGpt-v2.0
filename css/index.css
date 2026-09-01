@@ -181,14 +181,14 @@
             gap: 0.5rem;
             padding: 0.35rem 1rem;
             border-radius: 9999px;
-            background: rgb(18, 109, 115);
+            background: rgb(88, 193, 200);
             border: 1px solid var(--border-highlight);
             color: var(--accent);
             font-size: 0.75rem;
             font-weight: 600;
             font-family: var(--font-mono);
             margin-bottom: 1.5rem;
-            box-shadow: 0 0 20px rgb(88, 193, 200);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
         }
     
         .hero-title {
