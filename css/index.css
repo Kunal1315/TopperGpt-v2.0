@@ -19,7 +19,7 @@
             --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-mono: 'Space Mono', monospace;
         }
-    
+
         * {
             margin: 0;
             padding: 0;
@@ -284,7 +284,7 @@
             transform: translateY(-6px);
             box-shadow: 0 15px 35px rgb(88, 193, 200);
         }
-    
+
         .tool-card-icon {
             width: 54px;
             height: 54px;
@@ -299,7 +299,7 @@
             margin-bottom: 1.5rem;
             transition: transform 0.2s ease;
         }
-    
+        
         .tool-card:hover .tool-card-icon {
             transform: scale(1.1);
             border-color: var(--accent);
